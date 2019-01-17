@@ -1,0 +1,7 @@
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\Sequence_projects\SquareSequences\Sequences\obj\Debug\Sequences.csprojAssemblyReference.cache
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\Sequence_projects\SquareSequences\Sequences\obj\Debug\Sequences.csproj.CoreCompileInputs.cache
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\Sequence_projects\SquareSequences\Sequences\bin\Debug\Sequences.exe.config
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\Sequence_projects\SquareSequences\Sequences\bin\Debug\Sequences.exe
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\Sequence_projects\SquareSequences\Sequences\bin\Debug\Sequences.pdb
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\Sequence_projects\SquareSequences\Sequences\obj\Debug\Sequences.exe
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\Sequence_projects\SquareSequences\Sequences\obj\Debug\Sequences.pdb
