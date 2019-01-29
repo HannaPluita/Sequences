@@ -3,21 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sequences.Logic;
 using Sequences.UI;
 
 namespace Sequences
 {
     public class ListAnalyzer
     {
-        protected SequenceList<int> _list = new SequenceList<int>();
+        public const string ERR_SETTING = "Error of setting sequence.";
+        public readonly uint MAX_VALUE = 100000000;
 
-        public void SetSequence(int value)
+        protected uint _value;
+
+        public ListAnalyzer() : this(0)
+        {
+        }
+
+        public ListAnalyzer(uint value)
+        {
+            _value = value;
+        }
+
+        protected SequenceList<uint> _list = new SequenceList<uint>();
+
+        public void SetSequence()
         {
             try
             {
-                for (int i = 0; ; ++i)
+                for (uint i = 0; ; ++i)
                 {
-                    if (Math.Pow(i, 2) < value)
+                    if (i*i < _value)
                     {
                         _list.Add(i);
                     }
@@ -29,7 +44,7 @@ namespace Sequences
             }
             catch(Exception e)
             {
-
+                throw new Exception(ERR_SETTING, e);
             }
             
         }

@@ -8,10 +8,10 @@ namespace Sequences.UI
 {
     public static class ViewListToConsole
     {
-        public const uint CELL_NUMBER = 10;
+        public const uint CELLS_TO_PRINT_NUMBER = 20;
         public const string SEQUENCE = "Sequence:";
 
-        public static void OutputToConsole(this SequenceList<int> list, uint cellNumber = CELL_NUMBER)
+        public static void OutputToConsole(this IEnumerable<uint> list, uint cellNumber = CELLS_TO_PRINT_NUMBER)
         {
             int i = 0;
 
@@ -19,14 +19,16 @@ namespace Sequences.UI
             
             foreach(int info in list)
             {
-                Console.Write("{0}  ", info);
+                Console.Write("{0} ", info);
                 ++i;
-                if(i == CELL_NUMBER)
+                if(i == CELLS_TO_PRINT_NUMBER)
                 {
                     i = 0;
                     Console.WriteLine();
                 }
             }
+
+            Console.ReadKey();
         }
     }
 }

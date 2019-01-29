@@ -44,12 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ListAnalyzer.cs" />
-    <Compile Include="MathSequence.cs" />
-    <Compile Include="Node.cs" />
+    <Compile Include="Logic\Node.cs" />
+    <Compile Include="Logic\SequenceList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OutOfMemorySequenceException.cs" />
-    <Compile Include="SequenceList.cs" />
+    <Compile Include="UI\Input.cs" />
     <Compile Include="UI\Output.cs" />
     <Compile Include="UI\ViewToConsole.cs" />
   </ItemGroup>

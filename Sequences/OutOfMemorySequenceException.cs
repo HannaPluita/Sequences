@@ -12,12 +12,12 @@ namespace Sequences
     /// </summary>
     class OutOfMemorySequenceException : Exception
     {
-        public const string EXCEPTION_MESSAGE_1 = "OutOfMemorySequenceException: ";
-        public const string EXCEPTION_MESSAGE_2 = "You cannot add a new element of the sequence because of a lack of free memory space.";
-        public const string EXCEPTION_MESSAGE_3 = "You are out of free memory space limit.";
+        public const string EXP_MSG_NAME = "OutOfMemorySequenceException: ";
+        public const string EXP_MSG_CANNOT_ADD = "You cannot add a new element of the sequence because of a lack of free memory space.";
+        public const string EXP_MSG_OUT_OF_LIMIT = "You are out of free memory space limit.";
 
         public OutOfMemorySequenceException()
-            : base(String.Concat(EXCEPTION_MESSAGE_1, EXCEPTION_MESSAGE_2))
+            : base(String.Concat(EXP_MSG_NAME, EXP_MSG_CANNOT_ADD))
         {
         }
 
@@ -31,7 +31,7 @@ namespace Sequences
         }
         public override string ToString()
         {
-            return string.Format("{0}{1}", EXCEPTION_MESSAGE_1, EXCEPTION_MESSAGE_3);
+            return string.Format("{0}{1}", EXP_MSG_NAME, EXP_MSG_OUT_OF_LIMIT);
         }
     }
 }

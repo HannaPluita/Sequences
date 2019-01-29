@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sequences
+namespace Sequences.Logic
 {
     public class Node<T>
     {
         public Node()
         {
-            Prev = null;
+            //Prev = null;
             Next = null;
         }
 
         public Node(T info)
         {
             Info = info;
-            Prev = null;
+            //Prev = null;
             Next = null;
         }
 
@@ -26,7 +26,7 @@ namespace Sequences
         { }
 
         public T Info { get; set; }
-        public Node<T> Prev { get; set; }
+       // public Node<T> Prev { get; set; }
         public Node<T> Next { get; set; }
     }
 }
