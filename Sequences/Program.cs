@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Sequence.UI;
+using Sequences.Logic;
 using Sequences.UI;
+using Sequences.Logic.UserExceptions;
 
 namespace Sequences
 {
@@ -45,8 +47,17 @@ namespace Sequences
             {
                 ListAnalyzer analizer = new ListAnalyzer(value);
 
-                analizer.SetSequence();
-                analizer.ViewList();
+                analizer.GetSequence();
+
+                analizer.PrintListToConsole();
+            }
+            catch (ArgumentOutOfSequenceLimitRangeException e)
+            {
+                Output.OutputExceptionInfo(e);
+            }
+            catch (OutOfMemorySequenceException e)
+            {
+                Output.OutputExceptionInfo(e);
             }
             catch (Exception e)
             {

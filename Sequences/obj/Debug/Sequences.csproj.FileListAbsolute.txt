@@ -12,3 +12,10 @@ C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\SequenceFibonacci_mix\20
 C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\SequenceFibonacci_mix\20190117_Sequence\SquareSequences\Sequences\bin\Debug\Sequences.exe.config
 C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\SequenceFibonacci_mix\20190117_Sequence\SquareSequences\Sequences\bin\Debug\Sequences.exe
 C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\SequenceFibonacci_mix\20190117_Sequence\SquareSequences\Sequences\bin\Debug\Sequences.pdb
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\SequenceFibonacci_mix\20190129_Sequence_Tests\SquareSequences\Sequences\bin\Debug\Sequences.exe.config
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\SequenceFibonacci_mix\20190129_Sequence_Tests\SquareSequences\Sequences\bin\Debug\Sequences.exe
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\SequenceFibonacci_mix\20190129_Sequence_Tests\SquareSequences\Sequences\bin\Debug\Sequences.pdb
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\SequenceFibonacci_mix\20190129_Sequence_Tests\SquareSequences\Sequences\obj\Debug\Sequences.csprojAssemblyReference.cache
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\SequenceFibonacci_mix\20190129_Sequence_Tests\SquareSequences\Sequences\obj\Debug\Sequences.csproj.CoreCompileInputs.cache
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\SequenceFibonacci_mix\20190129_Sequence_Tests\SquareSequences\Sequences\obj\Debug\Sequences.exe
+C:\Users\solan\OneDrive\Projects\Dp-155\ElementaryTasks\SequenceFibonacci_mix\20190129_Sequence_Tests\SquareSequences\Sequences\obj\Debug\Sequences.pdb

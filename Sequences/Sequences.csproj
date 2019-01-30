@@ -46,12 +46,14 @@
     <Compile Include="ListAnalyzer.cs" />
     <Compile Include="Logic\Node.cs" />
     <Compile Include="Logic\SequenceList.cs" />
+    <Compile Include="Logic\SequenceInitializer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="OutOfMemorySequenceException.cs" />
+    <Compile Include="Logic\UserExceptions\OutOfMemorySequenceException.cs" />
     <Compile Include="UI\Input.cs" />
     <Compile Include="UI\Output.cs" />
     <Compile Include="UI\ViewToConsole.cs" />
+    <Compile Include="Logic\UserExceptions\ArgumentOutOfSequenceLimitRangeException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

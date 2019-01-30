@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sequences.Logic.UserExceptions;
 
 namespace Sequences.Logic
 {
     public class SequenceList<T> : IEnumerable<T>, IEnumerator<T>, IDisposable
-        where T: struct 
+        where T: struct, IComparable<T>
     {
         #region    Constants
         public const string LIST_EMPTY_GET_LAST = "You cannot get the last element of the list because the list is empty.";
@@ -23,6 +24,40 @@ namespace Sequences.Logic
         private Node<T> _first = null;
         private Node<T> _last = null;
         private Node<T> _current = null;
+
+        public SequenceList()
+        {
+        }
+
+        public ICollection<T> ToCollection()
+        {
+            if (_first == null)
+            {
+                return null;
+            }
+
+            ICollection<T> resultList = new List<T>();
+
+            foreach (T item in this)
+            {
+                resultList.Add(item);
+            }
+
+            return resultList as ICollection<T>;
+        }
+
+        public bool IsEmpty
+        {
+            get
+            {
+                if (_first == null)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+        }
 
         public bool Add(T info)                     
         {
@@ -59,47 +94,6 @@ namespace Sequences.Logic
                 throw new OutOfMemorySequenceException();
             }
         }
-
-        protected T PeekLast()
-        {
-            try
-            {
-                T result = default(T);
-
-                if (_last != null)
-                {
-                    result = _last.Info;
-                }
-
-                return result;
-            }
-            catch (NullReferenceException e)
-            {
-                throw new NullReferenceException(ERR_EMPTY_LIST, e);
-            }
-        }
-
-        protected T PeekFirst()
-        {
-            try
-            {
-                T retVal = default(T);
-
-                if (_first.Next == null)
-                {
-                    retVal = _first.Info;
-                }
-                else
-                {
-                    retVal = _first.Info;
-                }
-                return retVal;
-            }
-            catch (NullReferenceException e)
-            {
-                throw new NullReferenceException(ERR_EMPTY_LIST, e);
-            }
-        }                                       
 
         public T Peek(uint pos)
         {
@@ -144,6 +138,47 @@ namespace Sequences.Logic
             }
         }
 
+        protected T PeekLast()
+        {
+            try
+            {
+                T result = default(T);
+
+                if (_last != null)
+                {
+                    result = _last.Info;
+                }
+
+                return result;
+            }
+            catch (NullReferenceException e)
+            {
+                throw new NullReferenceException(ERR_EMPTY_LIST, e);
+            }
+        }
+
+        protected T PeekFirst()
+        {
+            try
+            {
+                T retVal = default(T);
+
+                if (_first.Next == null)
+                {
+                    retVal = _first.Info;
+                }
+                else
+                {
+                    retVal = _first.Info;
+                }
+                return retVal;
+            }
+            catch (NullReferenceException e)
+            {
+                throw new NullReferenceException(ERR_EMPTY_LIST, e);
+            }
+        }
+
         public uint Count
         {
             get
@@ -163,27 +198,40 @@ namespace Sequences.Logic
                 return count;
             }
         }
-
-        public object Current   
+       
+        public object Current
         {
-            get
-            {
-                for (Node<T> current = _first; ; current = current.Next)
-                {
-                    return current.Info;
-                }
-            }
+            get { return _current.Info; }
+        }
+
+        object IEnumerator.Current
+        {
+            get { return _current.Info; }
+        }
+
+        T IEnumerator<T>.Current
+        {
+            get { return _current.Info; }
         }
 
         public bool MoveNext()    
         {
-            if (_current == null)
+            if (_first == null || _last == null)
+            {
+                return false;
+            }
+
+            if (_current == null && _first == _last)
             {
                 _current = _first;
+                return true;
             }
-            else
+
+            if (_current.Next != null)
             {
                 _current = _current.Next;
+
+                return true;
             }
 
             return _current.Next != null;
@@ -220,14 +268,6 @@ namespace Sequences.Logic
                 yield return current.Info;
 
                 current = current.Next;
-            }
-        }
-
-        T IEnumerator<T>.Current
-        {
-            get
-            {
-                return _current.Info;
             }
         }
 

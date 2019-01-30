@@ -10,14 +10,12 @@ namespace Sequences.Logic
     {
         public Node()
         {
-            //Prev = null;
             Next = null;
         }
 
         public Node(T info)
         {
             Info = info;
-            //Prev = null;
             Next = null;
         }
 
@@ -26,7 +24,6 @@ namespace Sequences.Logic
         { }
 
         public T Info { get; set; }
-       // public Node<T> Prev { get; set; }
         public Node<T> Next { get; set; }
     }
 }

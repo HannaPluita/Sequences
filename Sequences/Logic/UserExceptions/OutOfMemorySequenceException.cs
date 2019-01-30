@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sequences
+namespace Sequences.Logic.UserExceptions
 {
     /// <summary>
     ///The exception class that occurs when trying to create a list item if there is no free memory space.
